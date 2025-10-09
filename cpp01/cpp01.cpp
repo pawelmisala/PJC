@@ -87,11 +87,11 @@ void zadanie1() {
 		}
 
 		if (temp > highestSum) {
-				highestSum = temp;
-				numberWithHighestSum = input;
+			highestSum = temp;
+			numberWithHighestSum = input;
 			}
 
-		temp = 0;
+	temp = 0;
 		
 	}
 	
@@ -107,13 +107,16 @@ void zadanie2(){
 		return;
 	}
 
-	for (int i = 0; i < a; i++) cout << "*" << endl;
+	for (int i = 0; i < a; i++)
+	cout << "*" << endl;
 	cout << endl;
 
-	for (int i = 0; i < b; i++) cout << "*" << endl;
+	for (int i = 0; i < b; i++)
+	cout << "*" << endl;
 	cout << endl;
 
-	for (int i = 0; i < c; i++) cout << "*" << endl;
+	for (int i = 0; i < c; i++)
+	cout << "*" << endl;
 	cout << endl;
 }
 void zadanie3(){
@@ -123,7 +126,7 @@ void zadanie3(){
 	int longestSequenceNumber = 0;
 	int temp = 0;
 
-	while (n != 0){
+	while (n != 0) {
 		cout << "enter an integer (0 to exit): ";
 		cin >> n;
 		
@@ -186,13 +189,14 @@ void zadanie5(){
 int main() {
 	int enteredNumber = -1;
 
-	while (true){
+	while (true) {
 		cout << "enter exercise number (1-5) (0 to exit): ";
 		cin >> enteredNumber;
 
-		if (enteredNumber == 0) break;
-
 		switch (enteredNumber) {
+			case 0:
+				return 0;
+				break;
 			case 1:
 				zadanie1();
 				break;
@@ -211,7 +215,6 @@ int main() {
 			
 			default:
 				cout << "invalid exercise number!" << endl;
-				break;
 		}
 	}
 
