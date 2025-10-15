@@ -5,19 +5,22 @@ const double* aver(const double* arr, size_t size, double& average) {
     for (int i = 0; i < size; i++) {
 		average += arr[i];
 	}	
-
 	average /= size;
 
 	double temp = arr[0];
 	double absToAverage = abs(average - temp);
-	double* result;
+	double resultValue;
+	double* pResult = &temp;
 
 	for (int i = 0; i < size; i++){
 		if (abs(average - arr[i]) < absToAverage) {
-				*result = arr[i];
+				resultValue = arr[i];
 		} 
 	}
-	return *result;
+
+	pResult = &resultValue;
+
+	return pResult;
 }
 
 int main () {
